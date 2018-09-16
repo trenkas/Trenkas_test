@@ -1,26 +1,26 @@
 import static java.lang.Math.PI;
 
-public class Circle {
+public class Circle extends Figure {
     private double d;
-    private double C;
-    private double S;
-    private double P;
+
 
     public Circle(double d) {
-        this.d=d;
-    }
-    double calculate_C(){
-        return this.d* PI;
+        this.d = d;
     }
 
-    double calculate_S(){
-         double r;
-         r=this.d/2;
-        return r*r * PI;
+
+    double getPerimetr() {
+        return this.d * PI;
     }
 
     @Override
+    double getArea() {
+        double r;
+        r = this.d / 2;
+        return r * r * PI;
+    }
+
     public String toString() {
-        return "Circle length is equal to : " +calculate_C() +"\n" + "Circle area is equal to : " +calculate_S();
+        return "Circle length is equal to : " + getPerimetr() + "\n" + "Circle area is equal to : " + getArea();
     }
 }

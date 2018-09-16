@@ -1,27 +1,23 @@
-class Rhombus extends Figure {
+class Rhombus extends Quadrangle {
 
     private double a;
     private double h;
 
     public Rhombus(double a, double h) {
-        this.a=a;
-        this.h=h;
-        this.setP();
-        this.setS();
+        this.a = a;
+        this.h = h;
+        this.setFigureName("Rhombus");
+
     }
 
-    double calculate_P (){
-        return this.a*4;
-    }
-
-    @Override
-    double calculate_S() {
-        return this.a*this.h;
-
+    double getPerimetr() {
+        return this.a * 4;
     }
 
     @Override
-    public String toString() {
-        return "P of Rhombus is equal to : " +calculate_P() +"\n" + "S of Rhombus is equal to : " + calculate_S();
+    double getArea() {
+        return this.a * this.h;
+
     }
+
 }

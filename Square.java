@@ -1,21 +1,23 @@
-class Square extends Figure {
+class Square extends Quadrangle {
 
     private double a;
 
     public Square(double a) {
-        this.a=a;
-        this.setFigure_name("Square");
-        this.setP();
-        this.setS();
+        this.a = a;
+        this.setFigureName("Square");
+
     }
 
     @Override
-    double calculate_P() {
-        return a*4;
+    double getPerimetr() {
+
+        return a * 4;
     }
 
     @Override
-    double calculate_S() {
-        return a*a;
+    double getArea() {
+        return a * a;
     }
+
+
 }
